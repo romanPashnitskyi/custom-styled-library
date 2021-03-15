@@ -1,0 +1,130 @@
+a.button,
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-color: #ff486c;
+  background-color: #ff486c;
+  font-weight: 500;
+  font-size: 15px;
+  text-shadow: none;
+  color: #fff;
+  max-width: 100%;
+  padding: 6.4px 15px;
+  border-style: solid;
+  border-radius: 3px;
+
+  .iconWrapper {
+    display: flex;
+  }
+
+  &.disabled {
+    color: rgba(0,0,0,.25);
+    background: #f5f5f5;
+    border-color: #d9d9d9;
+    text-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: not-allowed;
+    outline: 0;
+  }
+
+  &.withShadow:not(:disabled) {
+    box-shadow: 0 5px 10px #ff486c;
+  }
+
+  &.gray {
+    filter: grayscale(1);
+  }
+
+  &.lightGrey {
+    color: #3c3c3c;
+    border-color: #ebebeb;
+    background-color: #ebebeb;
+  }
+
+  &.fluid {
+    width: 100%;
+  }
+
+  &.medium {
+    height: 32px;
+    font-size: 14px;
+    padding: 4px 15px;
+    
+    span > svg {
+      transform: scale(0.8);
+    }
+  }
+
+  &.small {
+    height: 24px;
+    font-size: 14px;
+    padding: 0px 7px;
+
+    span > svg {
+      transform: scale(0.7);
+    }
+  }
+
+  &.round {
+    border-radius: 22px;
+  }
+
+  &.default {
+    background-color: #fff;
+    color: #ff486c;
+  }
+
+  &.ghost {
+    color: #ff486c;
+    background-color: transparent;
+  }
+
+  &:focus { 
+    outline: none;
+    border-color: #df9eed;
+    box-shadow: 0 0 10px #df9eed;
+  }
+
+  &:focus:not(:hover) {
+    color: #fff;
+    border-color: #ff486c;
+    background-color: #ff486c;
+
+    &.ghost {
+      color: #ff486c;
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    background-color: lighten(#ff486c, 7%);
+    border-color: lighten(#ff486c, 7%);
+    color: #fff;
+
+    &.disabled {
+      color: rgba(0,0,0,.25);
+      background: #f5f5f5;
+      border-color: #d9d9d9;
+    }
+
+    &.lightGrey {
+      background-color: lighten(#ebebeb, 3%);
+      border-color: lighten(#ebebeb, 3%);
+      color: #3c3c3c;
+    }
+  }
+
+  &:active {
+    background-color: darken(#ff486c, 7%);
+    border-color: darken(#ff486c, 7%);
+    color: #fff;
+
+    &.withShadow {
+      box-shadow: 0 5px 7px #ff486c;
+    }
+  }
+}
